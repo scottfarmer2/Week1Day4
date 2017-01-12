@@ -13,7 +13,7 @@ var customMap = function(data, callback){
 
 var stringLength = customMap(words, function(n){
   return n.length
-})
+});
 
 console.log(stringLength);
 
