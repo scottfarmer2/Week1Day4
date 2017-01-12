@@ -1,4 +1,4 @@
-const user_list_1 = [
+var user_list_1 = [
 {
   name: 'Jane Doe',
   hobbies: ['soccer', 'boxing']
@@ -8,11 +8,32 @@ const user_list_1 = [
 },
 ]
 
-const countHobbies =function(user){
-  return user.hobbies.length;
+var nums = [24, 12, 8.1];
+
+var customMap = function(data, callback){
+  var mappedValues = [];
+  for(let i = 0; i < data.length; i++){
+    var current = data[i];
+    var result = callback(current);
+    mappedValues.push(result);
+  }
+  return mappedValues;
 }
 
-console.log(user_list_1.map(countHobbies));
+var doubles = customMap(nums, function(n){
+  return n * 2;
+});
+
+// or with build it JS array methods which accepts a callback
+var countHobbies = function(user){
+  return user.hobbies.length;
+}
+users_list_1.map(countHobbies);
+// var countHobbies =function(user){
+//   return user.hobbies.length;
+// }
+
+// console.log(user_list_1.map(countHobbies));
 
 
 //==> [2,1]
